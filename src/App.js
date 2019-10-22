@@ -10,9 +10,10 @@ class App extends Component {
   }
 
 
-  //Your code here:
-
-
+  //Adding it here - automatically adds one timer component before you even click 
+  componentDidMount() {
+    this.handleAddTimer()
+  }
 
 
 
