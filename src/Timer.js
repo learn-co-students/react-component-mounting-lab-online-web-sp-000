@@ -7,12 +7,11 @@ class Timer extends Component {
     color: '#'+Math.floor(Math.random()*16777215).toString(16)
   }
 
-  // add your code here
-
-
-
-
-
+  // set the interval to a variable in the scope of this class (easiest to shut off)
+  // note the notation of seconds and also the this.clockTick
+  componentDidMount(){
+    this.interval = setInterval(this.clockTick,1000)
+  }
 
 
   render() {
@@ -28,6 +27,11 @@ class Timer extends Component {
 
       </section>
     );
+  }
+
+// clear to avoid memory leaks
+  componentWillUnmount(){
+    clearInterval(this.interval);
   }
 
   //clock functions
