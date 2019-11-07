@@ -10,20 +10,17 @@ class App extends Component {
   }
 
 
-  //Your code here:
-
-
-
-
-
-
-
+  // When the render function is invoked, as  a result of a change to state, the componentDidMount function will be invoked.
+  // In this case we are running a function to provide each timer with an ID. 
+  componentDidMount() {
+    this.handleAddTimer()
+  }
 
 
   // No need to modify anything in render or the class methods below
   // Unless, of course, you're curious about how it all works
   render() {
-
+    console.log("Timer IDs:", this.state)
     return (
       <div className="App">
         <h1>MultiTimer</h1>
