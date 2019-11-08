@@ -4,13 +4,17 @@ class Timer extends Component {
 
   state = {
     time: 0,
-    color: '#'+Math.floor(Math.random()*16777215).toString(16)
+    color: '#' + Math.floor(Math.random() * 16777215).toString(16)
   }
 
   // add your code here
+  componentDidMount() {
+    this.interval = setInterval(() => this.clockTick(), 1000)
+  }
 
-
-
+  componentWillUnmount() {
+    clearInterval(this.interval)
+  }
 
 
 
@@ -19,12 +23,12 @@ class Timer extends Component {
 
     const { time, color, className } = this.state
     return (
-      <section className="Timer" style={{background: color}}>
+      <section className="Timer" style={{ background: color }}>
 
-        <h1>{ time }</h1>
-        <button onClick={ this.stopClock }>Stop</button>
+        <h1>{time}</h1>
+        <button onClick={this.stopClock}>Stop</button>
         <aside className="mountText">Mounted</aside>
-        <small onClick={ this.handleClose }>X</small>
+        <small onClick={this.handleClose}>X</small>
 
       </section>
     );
@@ -33,7 +37,7 @@ class Timer extends Component {
   //clock functions
   clockTick = () => {
     this.setState(prevState => ({
-      time: prevState.time+1
+      time: prevState.time + 1
     }))
   }
 
