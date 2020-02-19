@@ -8,7 +8,11 @@ class App extends Component {
   state = {
     timerIDs: []
   }
-
+  //this.interval = setInterval(this.fetchWeather, 15000);
+  componentDidMount() {
+    this.handleAddTimer();
+    }
+  
 
   //Your code here:
 
