@@ -13,7 +13,9 @@ class Timer extends Component {
   }
 
 
-  componentWillUnmount(){}
+  componentWillUnmount(){
+    clearInterval(this.interval);
+  }
 
 
 
