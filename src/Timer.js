@@ -10,11 +10,13 @@ class Timer extends Component {
   // add your code here
 
   componentDidMount() {
-     this.interval = setInterval(this.clockTick, 1000)
+     this.interval = setInterval(this.clockTick, 1000)  //HAVE I CREATED THIS INSTANCE VARIABLE???? Can one create an instance variable just by writing 'this.variable = x'?
+     //setInterval(this.clockTick, 1000)  DOES NOT WORK
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval)
+    //clearInterval(this.interval)  WORKS EITHER WAY.
+    this.stopClock()
   }
 
 
