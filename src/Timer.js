@@ -17,10 +17,6 @@ class Timer extends Component {
     clearInterval(this.interval)
   }
 
-
-
-
-
   render() {
 
     const { time, color, className } = this.state
