@@ -9,11 +9,18 @@ class Timer extends Component {
 componentDidMount() {
 
 this.interval = 
-setInterval(this.fetch, 1000)
+setInterval(this.clockTick, 1000)
+
 
 
 
 }
+  componentWillUnmount() {
+    clearInterval(this.interval)
+  }
+
+
+  
   render() {
     const { time, color } = this.state;
     return (
@@ -42,5 +49,8 @@ setInterval(this.fetch, 1000)
     this.props.removeTimer(this.props.id);
   };
 }
+
+
+
 
 export default Timer;
