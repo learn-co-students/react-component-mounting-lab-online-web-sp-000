@@ -16,9 +16,7 @@ class App extends Component {
     this.handleAddTimer()
   }
 
-  componentWillUnmount() {
-    this.removeTimer()
-  }
+ 
   
 
 
