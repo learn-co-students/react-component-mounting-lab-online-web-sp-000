@@ -11,10 +11,12 @@ class App extends Component {
 
 
   //Your code here:
-
-
-
-
+//app top level component 
+//method invoked before any other child components 
+//invokes handleAddTimer class method
+  componentDidMount() {
+    this.handleAddTimer()
+}
 
 
 

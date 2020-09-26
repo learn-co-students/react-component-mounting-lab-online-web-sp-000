@@ -7,6 +7,16 @@ class Timer extends Component {
   };
 
   // add your code here
+  //allows you to delay something from happening on a component
+  //or cause repeating change, perfect for a timer app 
+  componentDidMount() {
+    setInterval(this.clockTick, 1000)
+}
+
+//clean the interval, passed in local variable 
+componentWillUnmount() {
+    clearInterval(this.stopClock)
+}
 
   render() {
     const { time, color } = this.state;
