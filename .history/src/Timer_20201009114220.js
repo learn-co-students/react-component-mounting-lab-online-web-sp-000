@@ -17,7 +17,7 @@ class Timer extends Component {
 
 
   render() {
-    const { time, color, className } = this.state;
+    const { time, color } = this.state;
     return (
       <section className="Timer" style={{ background: color }}>
         <h1>{time}</h1>
