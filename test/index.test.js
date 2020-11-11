@@ -17,7 +17,6 @@ describe('<App />', () => {
     spy(App.prototype, 'componentDidMount');
     appWrapper = shallow(<App />);
 
-
     //component mounted correctly
     expect(App.prototype.componentDidMount.calledOnce, "componentDidMount was not called").to.equal(true);
 
