@@ -11,11 +11,9 @@ class App extends Component {
 
 
   //Your code here:
-
-
-
-
-
+  componentDidMount(){
+    this.handleAddTimer()
+  }
 
 
 
@@ -36,6 +34,7 @@ class App extends Component {
       </div>
     );
   }
+
 
   // returns array of components written in JSX, mapped from this.state.timerIDs
   renderTimers = () => this.state.timerIDs.map(id => {
