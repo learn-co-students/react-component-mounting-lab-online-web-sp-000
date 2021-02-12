@@ -21,10 +21,16 @@ class Timer extends Component {
   }
 
   //clock functions
+  //this handles updating the state 
   clockTick = () => {
     this.setState(prevState => ({
       time: prevState.time + 1
     }));
+  };
+
+  //here we are setting an interval for clockTick every 1 second 
+  componentDidMount() {
+    this.interval = setInterval(this.clockTick, 1000);
   };
 
   stopClock = () => {
@@ -34,6 +40,10 @@ class Timer extends Component {
   // for the 'x' button,
   handleClose = () => {
     this.props.removeTimer(this.props.id);
+  };
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   };
 }
 
