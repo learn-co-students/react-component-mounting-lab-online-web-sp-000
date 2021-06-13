@@ -9,30 +9,18 @@ class App extends Component {
     timerIDs: []
   }
 
+  componentDidMount() {
+    this.handleAddTimer()
+  }
 
-  //Your code here:
-
-
-
-
-
-
-
-
-
-  // No need to modify anything in render or the class methods below
-  // Unless, of course, you're curious about how it all works
   render() {
-
     return (
       <div className="App">
         <h1>MultiTimer</h1>
         <button onClick={this.handleAddTimer}>Add New Timer</button>
-
         <div className="TimerGrid">
           {this.renderTimers()}
         </div>
-
       </div>
     );
   }
@@ -55,8 +43,6 @@ class App extends Component {
       timerIDs: prevState.timerIDs.filter(timer_id => timer_id !== id)
     }))
   }
-
-
 }
 
 export default App;
