@@ -11,13 +11,13 @@ class App extends Component {
 
 
   //Your code here:
+  componentDidMount() {
+    this.handleAddTimer()
+  }
 
+  componentWillUnmount() {
 
-
-
-
-
-
+  }
 
 
   // No need to modify anything in render or the class methods below
